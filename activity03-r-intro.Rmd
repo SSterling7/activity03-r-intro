@@ -120,6 +120,7 @@ x = x+14
 x = (x*18) - 257
 x = exp(x)
 x = x^2
+#hi
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, there should be 496 numbers in the secret message that are below 17.
