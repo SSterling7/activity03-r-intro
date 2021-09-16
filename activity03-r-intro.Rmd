@@ -1,6 +1,6 @@
 ---
 title: "Activity 3"
-author: "Team Name"
+author: "Stella and Lauren"
 output: github_document
 ---
 
@@ -26,64 +26,66 @@ knitr::opts_chunk$set(error = TRUE)
 
 Each of the following R chunks will cause an error and/or do the desired task incorrectly.  Find the mistake, and correct it to complete the intended action.
 
-Create three vectors that contain: 1) the lower case letters, 2) the lower case letters, and 3) some punctuation marks.
+Create three vectors that contain: 1) the lower case letters, 2) the upper case letters, and 3) some punctuation marks.
 
 ```{r}
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
-upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 
-punctuation <- c(".", ",", "!", "?", "'", """, "(", ")", " ", "-", ";", ":")
+punctuation <- c(".", ",", "!", "?", "'", "\"", "(", ")", " ", "-", ";", ":")
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
-**Response**:
+**Response**: Sometimes I find the error messsages unhelpful as they may say something one thing is wrong but it's another (especially with simple mistakes)? It's more useful to help find where an error is.
 
 
 Make one long vector containing all the symbols.
 
 ```{r}
-my_symbols <- cbind(lower_case, upper_case, punctuation)
+my_symbols <- c(lower_case, upper_case, punctuation)
+?c()
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
-**Response**:
+**Response**: use the ? thingy. c/rbind combine via column or row while c creates one large vector 
 
 
 Turn the `my_symbols` vector into a data frame, with the variable name "Symbol".
 
 ```{r}
-my_symbols <- dataframe(my_symbols)
-names(my_symbols) = Symbol
+my_symbols <- as.data.frame(my_symbols)
+names(my_symbols) <- "Symbol"
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
-**Response**:
+**Response**: we googled how to change something into a data frame. and then remembered that the name of what we are assigning to comes first.
 
 
 Find the total number of symbols we have in our data frame.  
 
 ```{r}
-len <- length(my_symbols)
+len <- nrow(my_symbols)
+len
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
-**Response**:
+**Response**: we had to use a different function as length ain't cutting it
 
 
 5. Create a new variable in your dataframe that assigns a number to each symbol.
 
 ```{r}
-my_symbols%Num <- 1:len
+my_symbols$Num <- 1:len
 ```
 
 Comment on what you noticed about the errors and how you used this information to correct the issues.
 
-**Response**:
+**Response**: $ assigns, : loop
 
 
 
@@ -112,7 +114,12 @@ Write your own code to complete the steps below.
 4. Square every number.
 
 ```{r}
+x <- as.data.frame(top_secret)
 
+x = x+14
+x = (x*18) - 257
+x = exp(x)
+x = x^2
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, there should be 496 numbers in the secret message that are below 17.
